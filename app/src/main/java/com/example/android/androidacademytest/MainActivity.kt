@@ -3,7 +3,7 @@ package com.example.android.androidacademytest
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class MainActivity : AppCompatActivity(), FragmentMoviesList.ChangeFragmentClick {
+class MainActivity : AppCompatActivity(), FragmentMoviesList.onMoviePreviewClick, FragmentMoviesDetails.onBackClick {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -14,13 +14,18 @@ class MainActivity : AppCompatActivity(), FragmentMoviesList.ChangeFragmentClick
     }
 
     override fun openMoviewDetails() {
-
-        val fragmentMoviesDetails = supportFragmentManager.findFragmentById(R.id.movies_details)
         supportFragmentManager.beginTransaction()
             .apply {
-                if (fragmentMoviesDetails != null) {
-                    replace(R.id.main_container, fragmentMoviesDetails)
-                }
+                addToBackStack(null)
+                add(R.id.main_container, FragmentMoviesDetails())
+                commit()
+            }
+    }
+
+    override fun onButtonBackClick() {
+        supportFragmentManager.beginTransaction()
+            .apply {
+                remove(supportFragmentManager.fragments.last())
                 commit()
             }
     }
