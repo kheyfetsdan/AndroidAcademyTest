@@ -5,11 +5,15 @@
         <shape>
             <gradient
                 android:type="radial"
-                android:endColor="#222232"
-                android:startColor="#404056"
-                android:gradientRadius="500"/>
+                android:endColor="@color/end_bg_colour"
+                android:startColor="@color/start_bg_colour"
+                android:gradientRadius="500dp"/>
+
+            <stroke
+                android:width="0.5dp"
+                android:color="@color/white" />
             <corners
-                android:radius="10.0dip" />
+                android:radius="10dp" />
         </shape>
     </item>
 </selector>

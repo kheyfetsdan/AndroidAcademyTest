@@ -8,14 +8,13 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/background_color">
+        android:layout_height="match_parent">
 
         <View
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="44dp"
             android:orientation="horizontal"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -69,10 +68,10 @@
                     android:id="@+id/movie_poster"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
                     android:layout_marginStart="2dp"
                     android:layout_marginEnd="2dp"
                     android:layout_marginBottom="48dp"
-                    android:shape="rectangle"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -90,13 +89,6 @@
 
         </LinearLayout>
 
-        <androidx.constraintlayout.widget.Barrier
-            android:id="@+id/barrierTopStar"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:barrierDirection="bottom"
-            app:constraint_referenced_ids="tag" />
-
         <TextView
             android:id="@+id/tag"
             android:layout_width="0dp"
@@ -108,7 +100,6 @@
             android:text="@string/tag"
             android:textColor="@color/my_pink"
             android:textSize="8dp"
-            app:layout_constraintBottom_toTopOf="@id/barrierTopStar"
             app:layout_constraintStart_toStartOf="@id/poster_background"
             app:layout_constraintTop_toTopOf="@id/poster_background" />
 
@@ -119,7 +110,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="4dp"
             app:layout_constraintStart_toStartOf="@id/poster_background"
-            app:layout_constraintTop_toBottomOf="@id/barrierTopStar"
+            app:layout_constraintTop_toBottomOf="@id/tag"
             app:srcCompat="@drawable/star_icon_on" />
 
         <ImageView
@@ -129,7 +120,7 @@
             android:layout_marginStart="4dp"
             android:layout_marginTop="4dp"
             app:layout_constraintStart_toEndOf="@id/star_1"
-            app:layout_constraintTop_toBottomOf="@id/barrierTopStar"
+            app:layout_constraintTop_toBottomOf="@id/tag"
             app:srcCompat="@drawable/star_icon_on" />
 
         <ImageView
@@ -139,7 +130,7 @@
             android:layout_marginStart="4dp"
             android:layout_marginTop="4dp"
             app:layout_constraintStart_toEndOf="@id/star_2"
-            app:layout_constraintTop_toBottomOf="@id/barrierTopStar"
+            app:layout_constraintTop_toBottomOf="@id/tag"
             app:srcCompat="@drawable/star_icon_on" />
 
         <ImageView
@@ -149,7 +140,7 @@
             android:layout_marginStart="4dp"
             android:layout_marginTop="4dp"
             app:layout_constraintStart_toEndOf="@id/star_3"
-            app:layout_constraintTop_toBottomOf="@id/barrierTopStar"
+            app:layout_constraintTop_toBottomOf="@id/tag"
             app:srcCompat="@drawable/star_icon_on" />
 
         <ImageView
@@ -159,7 +150,7 @@
             android:layout_marginStart="4dp"
             android:layout_marginTop="4dp"
             app:layout_constraintStart_toEndOf="@id/star_4"
-            app:layout_constraintTop_toBottomOf="@id/barrierTopStar"
+            app:layout_constraintTop_toBottomOf="@id/tag"
             app:srcCompat="@drawable/star_icon_off" />
 
         <TextView
@@ -169,10 +160,10 @@
             android:layout_marginTop="2dp"
             android:text="@string/review"
             android:textColor="@color/review_grey"
-            android:textSize="8dp"
+            android:textSize="8sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@id/star_off"
-            app:layout_constraintTop_toBottomOf="@id/barrierTopStar" />
+            app:layout_constraintTop_toBottomOf="@id/tag" />
 
         <TextView
             android:layout_width="0dp"
