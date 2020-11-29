@@ -2,12 +2,10 @@ package com.example.android.androidacademytest
 
 import android.content.Context
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.LinearLayout
+import androidx.fragment.app.Fragment
 
 class FragmentMoviesDetails : Fragment() {
 
@@ -25,7 +23,7 @@ class FragmentMoviesDetails : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val btnMovie = view.findViewById<LinearLayout>(R.id.toolbar)
+        val btnMovie = view.findViewById<View>(R.id.toolbar)
 
         btnMovie.setOnClickListener {
             listener?.onButtonBackClick()
@@ -39,7 +37,7 @@ class FragmentMoviesDetails : Fragment() {
     override fun onAttach(context: Context) {
         super.onAttach(context)
 
-        if (context is onBackClick){
+        if (context is onBackClick) {
             listener = context
         }
 
