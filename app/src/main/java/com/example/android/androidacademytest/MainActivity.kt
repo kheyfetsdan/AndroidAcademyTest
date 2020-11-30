@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity(), FragmentMoviesList.OnMoviePreviewClick,
-    FragmentMoviesDetails.onBackClick {
+    FragmentMoviesDetails.OnBackClick {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity(), FragmentMoviesList.OnMoviePreviewClick
         supportFragmentManager.beginTransaction()
             .apply {
                 addToBackStack(null)
-                add(R.id.main_container, FragmentMoviesDetails())
+                add(R.id.main_container, FragmentMoviesDetails(R.layout.fragment_movies_details))
                 commit()
             }
     }

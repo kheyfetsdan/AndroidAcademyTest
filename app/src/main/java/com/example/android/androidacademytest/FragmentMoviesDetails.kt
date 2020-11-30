@@ -7,9 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 
-class FragmentMoviesDetails : Fragment() {
+class FragmentMoviesDetails(layout: Int) : Fragment() {
 
-    private var listener: onBackClick? = null
+    private val layoutName = layout
+    private var listener: OnBackClick? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -17,27 +18,27 @@ class FragmentMoviesDetails : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_movies_details, container, false)
+        return inflater.inflate(layoutName, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val btnMovie = view.findViewById<View>(R.id.toolbar)
+        val btnMovie: View = view.findViewById(R.id.toolbar)
 
         btnMovie.setOnClickListener {
             listener?.onButtonBackClick()
         }
     }
 
-    interface onBackClick {
+    interface OnBackClick {
         fun onButtonBackClick()
     }
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
 
-        if (context is onBackClick) {
+        if (context is OnBackClick) {
             listener = context
         }
 
