@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity(), FragmentMoviesList.OnMoviePreviewClick
 
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
-                .add(R.id.main_container, FragmentMoviesList(R.layout.fragment_movies_list))
+                .add(R.id.main_container, FragmentMoviesList())
                 .commit()
         }
     }
@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity(), FragmentMoviesList.OnMoviePreviewClick
         supportFragmentManager.beginTransaction()
             .apply {
                 addToBackStack(null)
-                add(R.id.main_container, FragmentMoviesDetails(R.layout.fragment_movies_details))
+                add(R.id.main_container, FragmentMoviesDetails())
                 commit()
             }
     }

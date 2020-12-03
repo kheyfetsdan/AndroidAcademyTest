@@ -8,21 +8,9 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
 
-class FragmentMoviesList(layout: Int) : Fragment() {
-
-    private val layoutName = layout
+class FragmentMoviesList() : Fragment(R.layout.fragment_movies_list) {
 
     private var listener: OnMoviePreviewClick? = null
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        val view = inflater.inflate(layoutName, container, false)
-
-        return view
-    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
