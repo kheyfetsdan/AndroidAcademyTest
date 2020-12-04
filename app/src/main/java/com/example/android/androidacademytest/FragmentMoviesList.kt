@@ -15,6 +15,7 @@ class FragmentMoviesList() : Fragment(R.layout.fragment_movies_list) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
         val btnMovie: ImageView = view.findViewById(R.id.movie_poster)
 
         btnMovie.setOnClickListener {

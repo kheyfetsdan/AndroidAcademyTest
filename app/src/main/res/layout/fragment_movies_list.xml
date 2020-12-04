@@ -41,16 +41,26 @@
             app:layout_constraintStart_toEndOf="@+id/combined_shape"
             app:layout_constraintTop_toTopOf="@id/toolbar" />
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/movies_list_recycler"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"/>
+
         <include
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            layout="@layout/layout_movie_poster"
+            layout="@layout/view_holder_movie"
             android:layout_marginStart="14dp"
             android:layout_marginTop="18dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/toolbar"/>
+            app:layout_constraintTop_toBottomOf="@id/movies_list_recycler"/>
 
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 </ScrollView>
