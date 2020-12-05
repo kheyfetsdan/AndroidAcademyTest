@@ -14,4 +14,7 @@
     <string name="movie_name" formatted="false">Avengers: \nEnd Game</string>
     <string name="movies_list">Movies list</string>
     <string name="movies_list_aeg">Avengers: End Game</string>
+    <string name="movies_list_tenet">Tenet</string>
+    <string name="tag_tenet">Action, Sci-fi, Triller</string>
+
 </resources>

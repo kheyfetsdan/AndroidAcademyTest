@@ -1,4 +1,4 @@
-package com.example.android.androidacademytest
+  package com.example.android.androidacademytest
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,10 +7,11 @@ import androidx.recyclerview.widget.RecyclerView
 
 
 class MoviesAdaptor(
-    context: Context,
+    context: Context?,
     var movies: List<Movies>
 ) : RecyclerView.Adapter<ViewHolder>() {
 
+    private var listener: MoviesAdaptor.OnItemClickListener? = null
     private val inflater: LayoutInflater = LayoutInflater.from(context)
     override fun getItemCount(): Int = movies.size
 
@@ -22,5 +23,17 @@ class MoviesAdaptor(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(getItem(position))
+        holder.itemView.setOnClickListener {
+            listener!!.onItemClick()
+        }
+    }
+
+    fun setListener(onItemClickListener: OnItemClickListener?) {
+
+        listener = onItemClickListener
+    }
+
+    interface OnItemClickListener {
+        fun onItemClick()
     }
 }

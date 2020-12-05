@@ -13,6 +13,7 @@ class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     private  val tag: TextView = itemView.findViewById(R.id.tag)
 
     fun bind(movies: Movies) {
+        //poster.setImageDrawable(movies.poster)
         movie_name.text = movies.movie_name
         tag.text = movies.tag
     }
