@@ -2,9 +2,10 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/movies_details"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#191926">
+    android:background="@color/background_color">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -19,7 +20,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/picture_background"/>
+            app:srcCompat="@drawable/picture_background" />
 
         <View
             android:layout_width="0dp"
@@ -30,32 +31,36 @@
             app:layout_constraintStart_toStartOf="@+id/background_pic"
             app:layout_constraintTop_toTopOf="@+id/background_pic" />
 
-        <LinearLayout
+        <View
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="44dp"
+            android:orientation="horizontal"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="60dp"
-            android:orientation="horizontal">
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/arrow"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_gravity="center_vertical"
-                app:srcCompat="@drawable/chevrone" />
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@+id/toolbar"
+            app:layout_constraintTop_toTopOf="@id/toolbar"
+            app:srcCompat="@drawable/chevrone" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:text="@string/back"
-                android:textColor="@color/my_grey"
-                android:textSize="12sp" />
-
-        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/back"
+            android:textColor="@color/my_grey"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@id/arrow"
+            app:layout_constraintTop_toTopOf="@id/toolbar" />
 
 
         <TextView
@@ -68,7 +73,7 @@
             android:text="@string/age"
             android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/toolbar"/>
+            app:layout_constraintTop_toTopOf="@id/toolbar" />
 
         <TextView
             android:id="@+id/name"
@@ -101,7 +106,7 @@
             app:layout_constraintBottom_toTopOf="@id/barrierTopStar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/name"/>
+            app:layout_constraintTop_toBottomOf="@id/name" />
 
         <ImageView
             android:id="@+id/star_1"

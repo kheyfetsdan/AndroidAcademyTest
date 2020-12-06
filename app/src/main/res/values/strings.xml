@@ -12,4 +12,6 @@
     <string name="ruffalo">Mark Ruffalo</string>
     <string name="hemsworth">Chris Hemsworth</string>
     <string name="movie_name" formatted="false">Avengers: \nEnd Game</string>
+    <string name="movies_list">Movies list</string>
+    <string name="movies_list_aeg">Avengers: End Game</string>
 </resources>
