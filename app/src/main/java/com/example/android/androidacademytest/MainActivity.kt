@@ -2,9 +2,9 @@ package com.example.android.androidacademytest
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.android.androidacademytest.MoviesAdaptor.OnItemClickListener
+import com.example.android.androidacademytest.MoviesAdapter.OnItemMovieClickListener
 
-class MainActivity : AppCompatActivity(), OnItemClickListener,
+class MainActivity : AppCompatActivity(), OnItemMovieClickListener,
     FragmentMoviesDetails.OnBackClick {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

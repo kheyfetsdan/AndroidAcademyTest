@@ -216,7 +216,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/description" />
 
-        <ImageView
+        <!--<ImageView
             android:id="@+id/downey"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -328,7 +328,18 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/ruffalo_textview"
-            app:layout_constraintTop_toBottomOf="@+id/hemworth" />
+            app:layout_constraintTop_toBottomOf="@+id/hemworth" />-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/actor_recycler"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cast"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

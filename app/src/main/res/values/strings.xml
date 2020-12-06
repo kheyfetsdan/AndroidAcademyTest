@@ -16,5 +16,16 @@
     <string name="movies_list_aeg">Avengers: End Game</string>
     <string name="movies_list_tenet">Tenet</string>
     <string name="tag_tenet">Action, Sci-fi, Triller</string>
+    <string name="review_tenet">98 review"</string>
+    <string name="aeg_duration">137 min</string>
+    <string name="tenet_duration">97 min</string>
+    <string name="ww_duration">120 min</string>
+    <string name="bw_duration">102 min</string>
+    <string name="ww_tag">Action, Adventure, Fantasy</string>
+    <string name="bw_tag">Action, Adventure, Sci-Fi</string>
+    <string name="ww_review">38 review</string>
+    <string name="bw_rewiew">74 review</string>
+    <string name="ww_name">Wonder Woman</string>
+    <string name="bw_name">Black Window</string>
 
 </resources>
