@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
+
 class FragmentMoviesList() : Fragment(R.layout.fragment_movies_list) {
 
     private var listenerMovie: MoviesAdapter.OnItemMovieClickListener? = null
@@ -19,6 +20,10 @@ class FragmentMoviesList() : Fragment(R.layout.fragment_movies_list) {
         val adapter = MoviesAdapter(context, movies)
         list.adapter = adapter
         adapter.setListener(listenerMovie)
+
+        val itemDecoration =
+            ItemOffsetDecoration(12)
+        list.addItemDecoration(itemDecoration)
 
         list.layoutManager = GridLayoutManager(context, 2)
     }

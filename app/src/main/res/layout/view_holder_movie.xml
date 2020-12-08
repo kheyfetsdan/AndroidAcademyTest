@@ -6,8 +6,8 @@
     android:layout_height="wrap_content"
     android:layout_marginStart="14dp"
     android:layout_marginTop="18dp"
-    android:paddingBottom="20dp"
-    android:background="@drawable/poster_background_gradient">
+    android:background="@drawable/poster_background_gradient"
+    android:paddingBottom="20dp">
 
     <ImageView
         android:id="@+id/movie_poster"
@@ -73,24 +73,21 @@
         android:id="@+id/duration"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/aeg_duration"
-        android:textSize="8sp"
-        android:textColor="@color/my_grey"
         android:layout_marginStart="8dp"
+        android:text="@string/aeg_duration"
+        android:textColor="@color/my_grey"
+        android:textSize="8sp"
         app:layout_constraintStart_toStartOf="@id/poster_background"
-        app:layout_constraintTop_toBottomOf="@id/movie_name"/>
+        app:layout_constraintTop_toBottomOf="@id/movie_name" />
 
-    <RatingBar
+    <androidx.appcompat.widget.AppCompatRatingBar
         android:id="@+id/ratingBar_indicator"
         style="@style/CustomRatingBarStyle"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:rating="4"
-        android:scaleX="1"
-        android:scaleY="1"
         android:layout_marginStart="8dp"
         android:layout_marginTop="4dp"
+        android:rating="4"
         app:layout_constraintStart_toStartOf="@id/poster_background"
-        app:layout_constraintTop_toBottomOf="@id/tag"
-        />
+        app:layout_constraintTop_toBottomOf="@id/tag" />
 </androidx.constraintlayout.widget.ConstraintLayout>
