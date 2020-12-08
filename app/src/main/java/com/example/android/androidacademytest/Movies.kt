@@ -1,14 +1,21 @@
 package com.example.android.androidacademytest
 
 import android.graphics.drawable.Drawable
+import androidx.annotation.DrawableRes
+import androidx.annotation.StringRes
 import androidx.core.content.res.ResourcesCompat
 
 
 data class Movies(
-    val poster: Drawable?,
-    val movie_name: String,
-    val tag: String,
-    val review: String,
+    @DrawableRes
+    val poster: Int,
+    @StringRes
+    val movieName: Int,
+    @StringRes
+    val tag: Int,
+    @StringRes
+    val review: Int,
     val stars: Int,
-    val duration: String
+    @StringRes
+    val duration: Int
 )

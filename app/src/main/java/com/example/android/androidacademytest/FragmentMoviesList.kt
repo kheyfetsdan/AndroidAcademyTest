@@ -10,13 +10,12 @@ import androidx.recyclerview.widget.RecyclerView
 class FragmentMoviesList() : Fragment(R.layout.fragment_movies_list) {
 
     private var listenerMovie: MoviesAdapter.OnItemMovieClickListener? = null
-    private val util = DataUtil()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         val list = view.findViewById<RecyclerView>(R.id.movies_list_recycler)
-        val movies = util.generateMoviesList(context)
+        val movies = DataUtil.generateMoviesList()
         val adapter = MoviesAdapter(context, movies)
         list.adapter = adapter
         adapter.setListener(listenerMovie)

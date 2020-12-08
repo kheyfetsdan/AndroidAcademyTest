@@ -14,7 +14,6 @@ class FragmentMoviesDetails() : Fragment(R.layout.fragment_movies_details) {
 
     private var listener: OnBackClick? = null
     private var listenerActors: ActorAdapter.OnItemActorClickListener? = null
-    private val util = DataUtil()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -26,7 +25,7 @@ class FragmentMoviesDetails() : Fragment(R.layout.fragment_movies_details) {
         }
 
         val list = view.findViewById<RecyclerView>(R.id.actor_recycler)
-        val actors = util.generateActorsList(context)
+        val actors = DataUtil.generateActorsList()
         val adapter = ActorAdapter(context, actors)
         list.adapter = adapter
         list.layoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
