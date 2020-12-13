@@ -1,12 +1,9 @@
 package com.example.android.androidacademytest
 
-import android.content.Context
-import androidx.appcompat.content.res.AppCompatResources.getDrawable
-
 
 object DataUtil {
 
-    fun generateActorsList(): List<Actors> {
+    fun generateActorsList(): List<Actor> {
         val downey = R.drawable.downey
         val evans = R.drawable.evans
         val hemsworth = R.drawable.hemsworth
@@ -18,15 +15,15 @@ object DataUtil {
         val ruffalo_name = R.string.ruffalo
 
         return listOf(
-            Actors(downey, downey_name),
-            Actors(evans, evans_name),
-            Actors(hemsworth, hemsworth_name),
-            Actors(ruffalo, ruffalo_name)
+            Actor(downey, downey_name),
+            Actor(evans, evans_name),
+            Actor(hemsworth, hemsworth_name),
+            Actor(ruffalo, ruffalo_name)
         )
 
     }
 
-    fun generateMoviesList(): List<Movies> {
+    fun generateMoviesList(): List<Movie> {
         val tenet_poster = R.drawable.tenet_poster
         val aeg_poster = R.drawable.preview_movie
         val bw_poster = R.drawable.black_window_poster
@@ -56,10 +53,10 @@ object DataUtil {
         val ww_star: Int = 5
         val ww_duration = R.string.ww_duration
         return listOf(
-            Movies(tenet_poster, tanet_name, tenet_tag, tenet_review, tenet_star, tenet_duration),
-            Movies(aeg_poster, aeg_name, aeg_tag, aeg_review, aeg_star, aeg_duration),
-            Movies(bw_poster, bw_name, bw_tag, bw_review, bw_star, bw_duration),
-            Movies(ww_poster, ww_name, ww_tag, ww_review, ww_star, ww_duration)
+            Movie(tenet_poster, tanet_name, tenet_tag, tenet_review, tenet_star, tenet_duration),
+            Movie(aeg_poster, aeg_name, aeg_tag, aeg_review, aeg_star, aeg_duration),
+            Movie(bw_poster, bw_name, bw_tag, bw_review, bw_star, bw_duration),
+            Movie(ww_poster, ww_name, ww_tag, ww_review, ww_star, ww_duration)
         )
     }
 }

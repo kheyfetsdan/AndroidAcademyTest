@@ -11,8 +11,8 @@ class ActorsViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     private val photo: ImageView = itemView.findViewById(R.id.actor_photo)
     private val actorName: TextView = itemView.findViewById(R.id.actor_name)
 
-    fun bind(actors: Actors) {
-        photo.setImageResource(actors.photo)
-        actorName.setText(actors.name)
+    fun bind(actor: Actor) {
+        photo.setImageResource(actor.photo)
+        actorName.setText(actor.name)
     }
 }

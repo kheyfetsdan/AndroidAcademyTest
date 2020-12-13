@@ -16,13 +16,13 @@ class MoviesViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     private val stars: RatingBar = itemView.findViewById(R.id.ratingBar_indicator)
     private val duration: TextView = itemView.findViewById(R.id.duration)
 
-    fun bind(movies: Movies) {
-        poster.setImageResource(movies.poster)
-        movieName.text = movies.movieName.toString()
-        movieName.setText(movies.movieName)
-        tag.setText(movies.tag)
-        review.setText(movies.review)
-        stars.rating = movies.stars.toFloat()
-        duration.setText(movies.duration)
+    fun bind(movie: Movie) {
+        poster.setImageResource(movie.poster)
+        movieName.text = movie.movieName.toString()
+        movieName.setText(movie.movieName)
+        tag.setText(movie.tag)
+        review.setText(movie.review)
+        stars.rating = movie.stars.toFloat()
+        duration.setText(movie.duration)
     }
 }

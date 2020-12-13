@@ -5,7 +5,7 @@ import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 
 
-data class Actors (
+data class Actor (
     @DrawableRes
     val photo: Int,
     @StringRes

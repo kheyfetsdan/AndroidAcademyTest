@@ -1,3 +1,2 @@
-include ':RatingBarSvg-master'
 include ':app'
 rootProject.name = "AndroidAcademyTest"

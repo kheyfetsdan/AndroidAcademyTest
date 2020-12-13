@@ -17,6 +17,9 @@ class FragmentMoviesList() : Fragment(R.layout.fragment_movies_list) {
 
         val list = view.findViewById<RecyclerView>(R.id.movies_list_recycler)
         val movies = DataUtil.generateMoviesList()
+        val generateMoviesList: List<Movie> by lazy {
+            movies
+        }
         val adapter = MoviesAdapter(context, movies)
         list.adapter = adapter
         adapter.setListener(listenerMovie)

@@ -6,7 +6,7 @@ import androidx.annotation.StringRes
 import androidx.core.content.res.ResourcesCompat
 
 
-data class Movies(
+data class Movie(
     @DrawableRes
     val poster: Int,
     @StringRes

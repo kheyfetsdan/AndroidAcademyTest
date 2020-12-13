@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 
 class ActorAdapter ( context: Context?,
-    var actors: List<Actors>
+    var actors: List<Actor>
 ) : RecyclerView.Adapter<ActorsViewHolder>() {
 
     private var listenerActor: ActorAdapter.OnItemActorClickListener? = null
@@ -15,7 +15,7 @@ class ActorAdapter ( context: Context?,
     override fun getItemCount(): Int
             = actors.size
 
-    fun getItem(position: Int): Actors = actors[position]
+    fun getItem(position: Int): Actor = actors[position]
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ActorsViewHolder {
         return  ActorsViewHolder(inflater.inflate(R.layout.view_holder_actor, parent, false))
@@ -24,7 +24,7 @@ class ActorAdapter ( context: Context?,
     override fun onBindViewHolder(holderActors: ActorsViewHolder, position: Int) {
         holderActors.bind(getItem(position))
         holderActors.itemView.setOnClickListener {
-            listenerActor!!.onItemClick()
+            listenerActor?.onItemClick()
         }
     }
 

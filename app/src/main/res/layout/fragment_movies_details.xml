@@ -108,7 +108,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/name" />
 
-        <ImageView
+<!--        <ImageView
             android:id="@+id/star_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -156,7 +156,19 @@
             android:layout_marginTop="4dp"
             app:layout_constraintStart_toEndOf="@id/star_4"
             app:layout_constraintTop_toBottomOf="@id/barrierTopStar"
-            app:srcCompat="@drawable/star_icon_off" />
+            app:srcCompat="@drawable/star_icon_off" />-->
+
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:id="@+id/rating"
+            style="@style/CustomRatingBarStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:rating="4"
+            app:layout_constraintTop_toBottomOf="@id/barrierTopStar"
+            app:srcCompat="@drawable/star_icon_on"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -165,7 +177,7 @@
             android:text="@string/review"
             android:textColor="@color/review_grey"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@id/star_off"
+            app:layout_constraintStart_toEndOf="@id/rating"
             app:layout_constraintTop_toBottomOf="@id/barrierTopStar" />
 
         <androidx.constraintlayout.widget.Barrier
@@ -188,7 +200,7 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/star_1" />
+            app:layout_constraintTop_toBottomOf="@id/rating" />
 
         <TextView
             android:id="@+id/description"
@@ -222,6 +234,8 @@
             android:id="@+id/actor_recycler"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="16dp"
+            tools:listitem="@layout/view_holder_actor"
+            tools:orientation="horizontal"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/cast"
             app:layout_constraintBottom_toBottomOf="parent"
