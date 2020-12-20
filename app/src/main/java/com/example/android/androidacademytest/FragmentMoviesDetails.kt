@@ -25,8 +25,15 @@ class FragmentMoviesDetails() : Fragment(R.layout.fragment_movies_details) {
         }
 
         val list = view.findViewById<RecyclerView>(R.id.actor_recycler)
-        val actors = DataUtil.generateActorsList()
-        val adapter = ActorAdapter(context, actors)
+        val generateActorsList: List<Actor> by lazy {
+            DataUtil.generateActorsList()
+        }
+        val adapter = ActorAdapter(context, generateActorsList)
+
+        val itemDecoration =
+            ItemOffsetDecoration(16)
+
+        list.addItemDecoration(itemDecoration)
         list.adapter = adapter
         list.layoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
     }

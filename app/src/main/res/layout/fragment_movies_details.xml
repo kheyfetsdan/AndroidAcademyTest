@@ -108,67 +108,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/name" />
 
-<!--        <ImageView
-            android:id="@+id/star_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="4dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/barrierTopStar"
-            app:srcCompat="@drawable/star_icon_on" />
-
-        <ImageView
-            android:id="@+id/star_2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="4dp"
-            app:layout_constraintStart_toEndOf="@id/star_1"
-            app:layout_constraintTop_toBottomOf="@id/barrierTopStar"
-            app:srcCompat="@drawable/star_icon_on" />
-
-        <ImageView
-            android:id="@+id/star_3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="4dp"
-            app:layout_constraintStart_toEndOf="@id/star_2"
-            app:layout_constraintTop_toBottomOf="@id/barrierTopStar"
-            app:srcCompat="@drawable/star_icon_on" />
-
-        <ImageView
-            android:id="@+id/star_4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="4dp"
-            app:layout_constraintStart_toEndOf="@id/star_3"
-            app:layout_constraintTop_toBottomOf="@id/barrierTopStar"
-            app:srcCompat="@drawable/star_icon_on" />
-
-        <ImageView
-            android:id="@+id/star_off"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="4dp"
-            app:layout_constraintStart_toEndOf="@id/star_4"
-            app:layout_constraintTop_toBottomOf="@id/barrierTopStar"
-            app:srcCompat="@drawable/star_icon_off" />-->
-
         <androidx.appcompat.widget.AppCompatRatingBar
             android:id="@+id/rating"
-            style="@style/CustomRatingBarStyle"
+            style="@android:style/Widget.Holo.Light.RatingBar.Small"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="4dp"
-            app:layout_constraintStart_toStartOf="parent"
+            android:numStars="5"
+            android:progressTint="#E91E63"
             android:rating="4"
-            app:layout_constraintTop_toBottomOf="@id/barrierTopStar"
-            app:srcCompat="@drawable/star_icon_on"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barrierTopStar" />
 
         <TextView
             android:layout_width="wrap_content"
