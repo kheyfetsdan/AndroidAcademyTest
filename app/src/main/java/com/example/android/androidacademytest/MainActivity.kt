@@ -2,8 +2,9 @@ package com.example.android.androidacademytest
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.android.androidacademytest.MoviesAdapter.OnItemMovieClickListener
 
-class MainActivity : AppCompatActivity(), FragmentMoviesList.OnMoviePreviewClick,
+class MainActivity : AppCompatActivity(), OnItemMovieClickListener,
     FragmentMoviesDetails.OnBackClick {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,19 +17,19 @@ class MainActivity : AppCompatActivity(), FragmentMoviesList.OnMoviePreviewClick
         }
     }
 
-    override fun openMovieDetails() {
-        supportFragmentManager.beginTransaction()
-            .apply {
-                addToBackStack(null)
-                add(R.id.main_container, FragmentMoviesDetails())
-                commit()
-            }
-    }
-
     override fun onButtonBackClick() {
         supportFragmentManager.beginTransaction()
             .apply {
                 remove(supportFragmentManager.fragments.last())
+                commit()
+            }
+    }
+
+    override fun onItemClick() {
+        supportFragmentManager.beginTransaction()
+            .apply {
+                addToBackStack(null)
+                add(R.id.main_container, FragmentMoviesDetails())
                 commit()
             }
     }

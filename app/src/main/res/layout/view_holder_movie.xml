@@ -6,15 +6,14 @@
     android:layout_height="wrap_content"
     android:layout_marginStart="14dp"
     android:layout_marginTop="18dp"
-    android:paddingBottom="20dp"
     android:background="@drawable/poster_background_gradient"
-    app:layout_constraintEnd_toEndOf="@+id/movie_name">
+    android:paddingBottom="20dp">
 
     <ImageView
         android:id="@+id/movie_poster"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="2dp"
+        android:layout_margin="1dp"
         android:layout_marginStart="2dp"
         android:layout_marginEnd="2dp"
         android:layout_marginBottom="48dp"
@@ -46,57 +45,8 @@
         app:layout_constraintStart_toStartOf="@id/poster_background"
         app:layout_constraintTop_toTopOf="@id/poster_background" />
 
-    <ImageView
-        android:id="@+id/star_1"
-        android:layout_width="8dp"
-        android:layout_height="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintStart_toStartOf="@id/poster_background"
-        app:layout_constraintTop_toBottomOf="@id/tag"
-        app:srcCompat="@drawable/star_icon_on" />
-
-    <ImageView
-        android:id="@+id/star_2"
-        android:layout_width="8dp"
-        android:layout_height="8dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintStart_toEndOf="@id/star_1"
-        app:layout_constraintTop_toBottomOf="@id/tag"
-        app:srcCompat="@drawable/star_icon_on" />
-
-    <ImageView
-        android:id="@+id/star_3"
-        android:layout_width="8dp"
-        android:layout_height="8dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintStart_toEndOf="@id/star_2"
-        app:layout_constraintTop_toBottomOf="@id/tag"
-        app:srcCompat="@drawable/star_icon_on" />
-
-    <ImageView
-        android:id="@+id/star_4"
-        android:layout_width="8dp"
-        android:layout_height="8dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintStart_toEndOf="@id/star_3"
-        app:layout_constraintTop_toBottomOf="@id/tag"
-        app:srcCompat="@drawable/star_icon_on" />
-
-    <ImageView
-        android:id="@+id/star_off"
-        android:layout_width="8dp"
-        android:layout_height="8dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintStart_toEndOf="@id/star_4"
-        app:layout_constraintTop_toBottomOf="@id/tag"
-        app:srcCompat="@drawable/star_icon_off" />
-
     <TextView
+        android:id="@+id/review"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -105,7 +55,7 @@
         android:textColor="@color/review_grey"
         android:textSize="8sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@id/star_off"
+        app:layout_constraintStart_toEndOf="@id/ratingBar_indicator"
         app:layout_constraintTop_toBottomOf="@id/tag" />
 
     <TextView
@@ -117,6 +67,27 @@
         android:text="@string/movies_list_aeg"
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="@id/poster_background"
-        app:layout_constraintTop_toBottomOf="@id/star_1" />
+        app:layout_constraintTop_toBottomOf="@id/ratingBar_indicator" />
 
+    <TextView
+        android:id="@+id/duration"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/aeg_duration"
+        android:textColor="@color/my_grey"
+        android:textSize="8sp"
+        app:layout_constraintStart_toStartOf="@id/poster_background"
+        app:layout_constraintTop_toBottomOf="@id/movie_name" />
+
+    <androidx.appcompat.widget.AppCompatRatingBar
+        android:id="@+id/ratingBar_indicator"
+        style="@style/CustomRatingBarStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:rating="4"
+        app:layout_constraintStart_toStartOf="@id/poster_background"
+        app:layout_constraintTop_toBottomOf="@id/tag" />
 </androidx.constraintlayout.widget.ConstraintLayout>

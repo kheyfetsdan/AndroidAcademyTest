@@ -2,42 +2,45 @@ package com.example.android.androidacademytest
 
 import android.content.Context
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import android.widget.ImageView
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+
 
 class FragmentMoviesList() : Fragment(R.layout.fragment_movies_list) {
 
-    private var listener: OnMoviePreviewClick? = null
+    private var listenerMovie: MoviesAdapter.OnItemMovieClickListener? = null
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val btnMovie: ImageView = view.findViewById(R.id.movie_poster)
-
-        btnMovie.setOnClickListener {
-            listener?.openMovieDetails()
+        val list = view.findViewById<RecyclerView>(R.id.movies_list_recycler)
+        val generateMoviesList: List<Movie> by lazy {
+            DataUtil.generateMoviesList()
         }
-    }
+        val adapter = MoviesAdapter(context, generateMoviesList)
+        list.adapter = adapter
+        adapter.setListener(listenerMovie)
 
+        val itemDecoration =
+            ItemOffsetDecoration(12)
+        list.addItemDecoration(itemDecoration)
 
-    interface OnMoviePreviewClick {
-        fun openMovieDetails()
+        list.layoutManager = GridLayoutManager(context, 2)
     }
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
 
-        if (context is OnMoviePreviewClick) {
-            listener = context
+        if (context is MoviesAdapter.OnItemMovieClickListener) {
+            listenerMovie = context
         }
 
     }
 
     override fun onDetach() {
         super.onDetach()
-        listener = null
+        listenerMovie = null
     }
 }
