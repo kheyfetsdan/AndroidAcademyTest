@@ -1,5 +1,8 @@
 package com.example.android.androidacademytest
 
+import com.example.android.androidacademytest.model.Actor
+import com.example.android.androidacademytest.model.Movie
+
 
 object DataUtil {
 
@@ -9,21 +12,33 @@ object DataUtil {
         val hemsworth = R.drawable.hemsworth
         val ruffalo = R.drawable.ruffalo
 
-        val downey_name = R.string.downey
-        val evans_name = R.string.evans
-        val hemsworth_name = R.string.hemsworth
-        val ruffalo_name = R.string.ruffalo
+        val downey_name = "R.string.downey"
+        val evans_name = "R.string.evans"
+        val hemsworth_name = "R.string.hemsworth"
+        val ruffalo_name = "R.string.ruffalo"
 
         return listOf(
-            Actor(downey, downey_name),
-            Actor(evans, evans_name),
-            Actor(hemsworth, hemsworth_name),
-            Actor(ruffalo, ruffalo_name)
+            Actor(
+                downey,
+                downey_name
+            ),
+            Actor(
+                evans,
+                evans_name
+            ),
+            Actor(
+                hemsworth,
+                hemsworth_name
+            ),
+            Actor(
+                ruffalo,
+                ruffalo_name
+            )
         )
 
     }
 
-    fun generateMoviesList(): List<Movie> {
+    /*fun generateMoviesList(): List<Movie> {
         val tenet_poster = R.drawable.tenet_poster
         val aeg_poster = R.drawable.preview_movie
         val bw_poster = R.drawable.black_window_poster
@@ -53,10 +68,38 @@ object DataUtil {
         val ww_star: Int = 5
         val ww_duration = R.string.ww_duration
         return listOf(
-            Movie(tenet_poster, tanet_name, tenet_tag, tenet_review, tenet_star, tenet_duration),
-            Movie(aeg_poster, aeg_name, aeg_tag, aeg_review, aeg_star, aeg_duration),
-            Movie(bw_poster, bw_name, bw_tag, bw_review, bw_star, bw_duration),
-            Movie(ww_poster, ww_name, ww_tag, ww_review, ww_star, ww_duration)
+            Movie(
+                tenet_poster,
+                tanet_name,
+                tenet_tag,
+                tenet_review,
+                tenet_star,
+                tenet_duration
+            ),
+            Movie(
+                aeg_poster,
+                aeg_name,
+                aeg_tag,
+                aeg_review,
+                aeg_star,
+                aeg_duration
+            ),
+            Movie(
+                bw_poster,
+                bw_name,
+                bw_tag,
+                bw_review,
+                bw_star,
+                bw_duration
+            ),
+            Movie(
+                ww_poster,
+                ww_name,
+                ww_tag,
+                ww_review,
+                ww_star,
+                ww_duration
+            )
         )
-    }
+    }*/
 }
