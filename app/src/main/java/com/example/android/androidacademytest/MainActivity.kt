@@ -2,7 +2,7 @@ package com.example.android.androidacademytest
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.android.androidacademytest.MoviesAdapter.OnItemMovieClickListener
+import com.example.android.androidacademytest.MovieAdapter.OnItemMovieClickListener
 
 class MainActivity : AppCompatActivity(), OnItemMovieClickListener,
     FragmentMoviesDetails.OnBackClick {
