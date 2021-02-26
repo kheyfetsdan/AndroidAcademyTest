@@ -17,6 +17,8 @@ class MainActivity : AppCompatActivity(), OnItemMovieClickListener,
         }
     }
 
+    //For commit
+
     override fun onButtonBackClick() {
         supportFragmentManager.beginTransaction()
             .apply {
